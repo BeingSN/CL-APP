@@ -1,0 +1,51 @@
+@import "./variables.scss";
+@import "./components/header.scss";
+@import "./components/home.scss";
+@import "./components/standings.scss";
+
+body,
+html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+body {
+  font-size: 16px;
+  overflow-x: hidden;
+}
+
+.App {
+  display: flex;
+}
+
+.container {
+  margin: 0 auto;
+}
+
+.row {
+  display: flex;
+}
+
+.col-70 {
+  width: 70%;
+}
+
+.col-30 {
+  width: 30%;
+}
+
+.sticky {
+  position: sticky;
+  top: 0;
+  vertical-align: top;
+}
+
+.p-1 {
+  padding: 0 20px;
+}
+
+hr {
+  background-color: currentColor;
+  margin: 0.5rem 0;
+}

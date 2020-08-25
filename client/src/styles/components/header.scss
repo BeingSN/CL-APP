@@ -1,0 +1,32 @@
+.header {
+  //   position: absolute;
+  mix-blend-mode: difference;
+  //   left: 0;
+  //   top: 0;
+  z-index: 1;
+  //   width: 100%;
+  flex: 1;
+  .container-sticky {
+    position: sticky;
+    display: flex;
+
+    top: 0;
+    .col-left {
+      .wrapper {
+        padding: 0 40px;
+        nav {
+          ul {
+            li {
+              list-style: none;
+              margin-bottom: 1rem;
+              a {
+                color: rgb(40, 40, 40);
+                text-decoration: none;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
