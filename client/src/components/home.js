@@ -3,7 +3,8 @@ import { Link } from "react-router-dom";
 import { useFetch } from "../hooks/useFetch";
 import Standings from "./standings";
 import Image from "../assets/images/winner.jpg";
-import logo from "../assets/images/logo.svg";
+
+import bgVid from "../assets/videos/bg1.mp4";
 import Prediction from "./prediction";
 import { AddPrediction } from "./addPrediction";
 
@@ -36,46 +37,45 @@ const Home = () => {
     <div className="main">
       <div className="container">
         <div className="col-right">
-          <div className="logo-container">
-            <Link to="/">
-              <img src={logo}></img>
-            </Link>
-          </div>
-          <div className="row banner">
-            <h2>UEFA Champions League</h2>
-          </div>
-          <div className="match-info">
-            <div className="sticky flex-col col-30">
-              <div class="p-1">
-                <div className="recent-match">
-                  <h4 className="title">Final Match</h4>
-                  <hr></hr>
-                  <p>{recentMatch.date}</p>
-                  <div className="match">
-                    <span>{recentMatch.team1}</span>
-                    <span>{recentMatch.score1}</span>
-                    <span>-</span>
-                    <span>{recentMatch.score2}</span>
-                    <span>{recentMatch.team2}</span>
-                  </div>
-                </div>
-                <div className="prediction-container">
-                  <Prediction />
-                  <AddPrediction />
-                </div>
-                <div className="winner">
-                  <img src={Image}></img>
-                  <a href="https://www.uefa.com/uefachampionsleague/match/2030150--paris-vs-bayern/postmatch/report/">
-                    <small>credit: uefa </small>
-                  </a>
-                </div>
+          <section className="rel">
+            <div className="bg-vid">
+              <div className="sticky">
+                <video autoPlay muted loop src={bgVid}></video>
               </div>
             </div>
+            <div className="match-info">
+              <div className="sticky flex-col col-30">
+                <div class="p-1">
+                  <div className="recent-match">
+                    <h4 className="title">Final Match</h4>
+                    <hr></hr>
+                    <p>{recentMatch.date}</p>
+                    <div className="match">
+                      <span>{recentMatch.team1}</span>
+                      <span>{recentMatch.score1}</span>
+                      <span>-</span>
+                      <span>{recentMatch.score2}</span>
+                      <span>{recentMatch.team2}</span>
+                    </div>
+                  </div>
+                  <div className="prediction-container">
+                    <Prediction />
+                    <AddPrediction />
+                  </div>
+                  <div className="winner">
+                    <img src={Image}></img>
+                    <a href="https://www.uefa.com/uefachampionsleague/match/2030150--paris-vs-bayern/postmatch/report/">
+                      <small>credit: uefa </small>
+                    </a>
+                  </div>
+                </div>
+              </div>
 
-            <div className="standings-wrapper col-70">
-              <Standings />
+              <div className="standings-wrapper col-70">
+                <Standings />
+              </div>
             </div>
-          </div>
+          </section>
         </div>
 
         <main>

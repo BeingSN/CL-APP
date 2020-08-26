@@ -10,16 +10,18 @@
     .logo-container {
       margin: 2rem 0;
     }
-    .banner {
-      h2 {
-        font-size: 5rem;
-        font-weight: 300;
-      }
-    }
   }
 }
 
 .match-info {
+  // left: 20%;
+  position: relative;
+  top: 10%;
+  width: 70%;
+  float: right;
+  &:after {
+    clear: both;
+  }
   .flex-col {
     // background: $poloBlue;
     background: aliceblue;
@@ -27,6 +29,7 @@
     display: inline-block;
     // flex-direction: column;
     // flex-wrap: nowrap;
+
     & > div {
       margin-bottom: 4rem;
     }
@@ -45,9 +48,44 @@
     }
 
     .winner {
+      max-width: 250px;
+      margin: 0 auto;
       img {
         width: 100%;
       }
+    }
+  }
+}
+
+.rel {
+  position: relative;
+}
+
+.bg-vid {
+  // position: relative;
+  position: absolute;
+
+  left: 0;
+  top: -4%;
+  // bottom: 0;
+  // top: 0;
+  .sticky {
+    // height: 100vh;
+    // overflow: hidden;
+    video {
+      width: 100%;
+    }
+  }
+}
+
+//banner
+.hero-container {
+  flex: 4;
+  margin-bottom: 5rem;
+  .banner {
+    h2 {
+      font-size: 5rem;
+      font-weight: 300;
     }
   }
 }
