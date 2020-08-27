@@ -1,0 +1,40 @@
+.stats-container {
+  background: antiquewhite;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  .columns-wrapper {
+    width: 100%;
+    color: #333333;
+    h3 {
+      margin-left: 2rem;
+    }
+    :nth-child(1) {
+      font-size: 1.1rem;
+    }
+
+    .stats-item {
+      width: 25%;
+      display: inline-block;
+
+      .stats-item-wrap {
+        padding: 20px;
+        line-height: 1;
+
+        //   float: left;
+
+        .stats-label {
+          font-size: 0.9rem;
+          line-height: 1;
+        }
+        .stats-value {
+          font-size: 2rem;
+          margin-top: 0.5rem;
+
+          + .font-sm {
+            font-size: 1.1rem;
+          }
+        }
+      }
+    }
+  }
+}

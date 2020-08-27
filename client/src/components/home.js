@@ -7,6 +7,7 @@ import Image from "../assets/images/winner.jpg";
 import bgVid from "../assets/videos/bg1.mp4";
 import Prediction from "./prediction";
 import { AddPrediction } from "./addPrediction";
+import Statistics from "./statistics";
 
 const recentMatch = {
   team1: "Paris",
@@ -76,6 +77,8 @@ const Home = () => {
               </div>
             </div>
           </section>
+
+          <Statistics />
         </div>
 
         <main>
