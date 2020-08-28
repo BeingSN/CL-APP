@@ -100,7 +100,7 @@ const Standings = () => {
                 </tbody>
               </table>
             ))
-          : "loading"}
+          : "loading..."}
       </div>
     </>
   );

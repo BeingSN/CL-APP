@@ -5,11 +5,8 @@
   .columns-wrapper {
     width: 100%;
     color: #333333;
-    h3 {
+    h2 {
       margin-left: 2rem;
-    }
-    :nth-child(1) {
-      font-size: 1.1rem;
     }
 
     .stats-item {
@@ -29,10 +26,9 @@
         .stats-value {
           font-size: 2rem;
           margin-top: 0.5rem;
-
-          + .font-sm {
-            font-size: 1.1rem;
-          }
+        }
+        .font-sm {
+          font-size: 1.1rem;
         }
       }
     }

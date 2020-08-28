@@ -1,0 +1,51 @@
+.featured {
+  position: relative;
+  .featured-container-player {
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    .heading {
+      text-transform: uppercase;
+      h2 {
+        font-size: 1.1rem;
+      }
+
+      .name {
+        font-size: 1.8rem;
+      }
+    }
+    .img-bg {
+      background: url("../../assets/images/clfinal.webp");
+      width: 100%;
+      max-width: 500px;
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      margin-top: 12px;
+      .content-box {
+        display: flex;
+        flex-direction: row;
+
+        padding-top: 220px;
+        & > div {
+          text-align: center;
+          background: black;
+          opacity: 0.8;
+          padding: 10px;
+        }
+
+        .label,
+        .value {
+          color: white;
+          text-transform: uppercase;
+        }
+
+        .label {
+          font-size: 12px;
+        }
+        .value {
+          font-size: 18px;
+        }
+      }
+    }
+  }
+}

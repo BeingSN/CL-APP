@@ -8,6 +8,7 @@ import bgVid from "../assets/videos/bg1.mp4";
 import Prediction from "./prediction";
 import { AddPrediction } from "./addPrediction";
 import Statistics from "./statistics";
+import Featured from "./featured";
 
 const recentMatch = {
   team1: "Paris",
@@ -46,7 +47,7 @@ const Home = () => {
             </div>
             <div className="match-info">
               <div className="sticky flex-col col-30">
-                <div class="p-1">
+                <div className="p-1">
                   <div className="recent-match">
                     <h4 className="title">Final Match</h4>
                     <hr></hr>
@@ -79,6 +80,7 @@ const Home = () => {
           </section>
 
           <Statistics />
+          <Featured />
         </div>
 
         <main>
