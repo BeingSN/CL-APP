@@ -17,7 +17,7 @@ const Featured = () => {
           <p>{data.position}</p>
         </div>
 
-        <div className="img-bg">
+        <div className="img-bg img-bg-player">
           <div className="content-box">
             <div>
               <div className="label">Saves</div>
@@ -31,7 +31,24 @@ const Featured = () => {
         </div>
       </div>
       <div className="featured-container-goal row">
-        <img src="" alt="" />
+        <div className="heading">
+          <h2>Featured goal</h2>
+          <p className="name">Marcel Sabitzer</p>
+          <p> Leipzig 2-1 Zenit</p>
+        </div>
+
+        <div className="img-bg img-bg-goal">
+          <div className="content-box">
+            <div>
+              <div className="label">23/10/19:</div>
+              <div className="value"> Matchday 3</div>
+            </div>
+            <div>
+              <div className="label"></div>
+              <div className="value"></div>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
   );

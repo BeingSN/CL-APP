@@ -1,8 +1,14 @@
 .featured {
   position: relative;
-  .featured-container-player {
+  .featured-container-goal {
+    margin-left: 11rem;
+  }
+  .featured-container-player,
+  .featured-container-goal {
     justify-content: space-evenly;
     flex-wrap: wrap;
+    margin-bottom: 2.5rem;
+    width: 80%;
     .heading {
       text-transform: uppercase;
       h2 {
@@ -13,8 +19,13 @@
         font-size: 1.8rem;
       }
     }
-    .img-bg {
+    .img-bg-player {
       background: url("../../assets/images/clfinal.webp");
+    }
+    .img-bg-goal {
+      background: url("../../assets/images/goal.webp");
+    }
+    .img-bg {
       width: 100%;
       max-width: 500px;
       background-size: cover;

@@ -65,6 +65,7 @@ const Home = () => {
                     <AddPrediction />
                   </div>
                   <div className="winner">
+                    <h4>Winners: Bayern Munich</h4>
                     <img src={Image}></img>
                     <a href="https://www.uefa.com/uefachampionsleague/match/2030150--paris-vs-bayern/postmatch/report/">
                       <small>credit: uefa </small>
