@@ -9,6 +9,7 @@ import Prediction from "./prediction";
 import { AddPrediction } from "./addPrediction";
 import Statistics from "./statistics";
 import Featured from "./featured";
+import Latest from "./latest";
 
 const recentMatch = {
   team1: "Paris",
@@ -79,7 +80,7 @@ const Home = () => {
               </div>
             </div>
           </section>
-
+          <Latest />
           <Statistics />
           <Featured />
         </div>

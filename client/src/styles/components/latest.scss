@@ -1,0 +1,82 @@
+.latest {
+  .squad-container {
+    width: 50%;
+    margin: 0 auto;
+    .field {
+      background: $tranquil;
+      //   width: 800px;
+      //   height: 700px;
+      text-align: center;
+      padding: 40px;
+
+      .players {
+        grid-gap: 20px 10px;
+        grid-template-rows: repeat(8, [row] auto);
+        grid-template-columns: repeat(4, [col] 150px);
+        h4 {
+          font-weight: 300;
+          background: aliceblue;
+          letter-spacing: 1px;
+        }
+
+        .g-label-1 {
+          grid-row: 1;
+        }
+        .g-label-2 {
+          grid-row: 3;
+        }
+        .g-label-3 {
+          grid-row: 5;
+        }
+        .g-label-4 {
+          grid-row: 7;
+        }
+
+        .player {
+          //   width: 20px;
+          //   height: 20px;
+          //   border-radius: 50%;
+          span {
+            font-size: 0.85rem;
+          }
+          img {
+            margin-right: 10px;
+            width: 30px;
+            border-radius: 50%;
+            border: 2px solid #eee;
+            vertical-align: middle;
+          }
+        }
+
+        .inner-grid {
+          display: grid;
+          grid-gap: 10px;
+        }
+
+        .goalkeepers {
+          grid-column: col 2 / span 2;
+          grid-row: row 2;
+        }
+        .defenders,
+        .forwards {
+          grid-column: col / span 4;
+          grid-row: row 4;
+          grid-template-columns: 1fr 1fr 1fr;
+          .player {
+          }
+        }
+        .midfielders {
+          grid-column: col / span 4;
+          grid-row: row 6;
+          grid-template-columns: 1fr 1fr 1fr 1fr;
+          .player {
+          }
+        }
+        .forwards {
+          grid-column: col / span 4;
+          grid-row: row 8;
+        }
+      }
+    }
+  }
+}

@@ -5,6 +5,7 @@
   .columns-wrapper {
     width: 100%;
     color: #333333;
+    padding: 0 80px;
     h2 {
       margin-left: 2rem;
     }
@@ -16,8 +17,6 @@
       .stats-item-wrap {
         padding: 20px;
         line-height: 1;
-
-        //   float: left;
 
         .stats-label {
           font-size: 0.9rem;

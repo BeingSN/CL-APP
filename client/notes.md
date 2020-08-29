@@ -16,3 +16,4 @@ later:
 context api
 hooks
 news api?
+pick your squad

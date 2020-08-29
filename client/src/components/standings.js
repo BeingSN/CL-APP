@@ -32,7 +32,7 @@ const Standings = () => {
                 <thead>
                   <tr className="s-labels">
                     <th className="s-icon table-col-10"></th>
-                    <th className="s-group">{s.group}</th>
+                    <th className="s-group">{s.group.replace(/_/g, " ")}</th>
                     <th className="s-played table-col-10">Played</th>
                     <th className="s-won table-col-10">Won</th>
                     <th className="s-lost table-col-10">Lost</th>
