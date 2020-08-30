@@ -1,4 +1,7 @@
 .latest {
+  h2 {
+    padding: 20px 60px;
+  }
   .squad-container {
     width: 50%;
     margin: 0 auto;
@@ -7,7 +10,7 @@
       //   width: 800px;
       //   height: 700px;
       text-align: center;
-      padding: 40px;
+      padding: 46px;
 
       .players {
         grid-gap: 20px 10px;
@@ -41,7 +44,7 @@
           }
           img {
             margin-right: 10px;
-            width: 30px;
+            width: 35px;
             border-radius: 50%;
             border: 2px solid #eee;
             vertical-align: middle;

@@ -14,7 +14,7 @@ function App() {
     <GlobalProvider>
       <Router>
         <div className="App">
-          <div className="flex">
+          <div className="flex header-top">
             <Header />
             <Hero />
           </div>
