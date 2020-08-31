@@ -64,11 +64,10 @@
 
 .bg-vid {
   // position: relative;
-  position: absolute;
+  // position: absolute;
   left: 0;
   top: -4%;
-  // bottom: 0;
-  // top: 0;
+  display: inline; //for sticky child to work
   .sticky {
     // height: 100vh;
     // overflow: hidden;
