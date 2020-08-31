@@ -1,9 +1,11 @@
 .latest {
-  h2 {
-    padding: 20px 60px;
+  margin: 0 auto;
+  .section-heading {
+    width: 1000px;
   }
+
   .squad-container {
-    width: 50%;
+    width: 70%;
     margin: 0 auto;
     .field {
       background: $tranquil;

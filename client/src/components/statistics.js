@@ -5,7 +5,7 @@ const Statistics = () => {
     <>
       <div className="stats-container">
         <div className="container columns-wrapper">
-          <h2>Numbers</h2>
+          <h2>Champions League in Numbers</h2>
           <div className="col-25 stats-item">
             <div className="stats-item-wrap">
               <div className="stats-label">Top scorer</div>

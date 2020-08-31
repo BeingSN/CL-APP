@@ -2,12 +2,17 @@
   background: antiquewhite;
   margin-top: 2rem;
   margin-bottom: 2rem;
+  border-top: 1px solid #eeeeee;
+  border-bottom: 1px solid #eeeeee;
+  padding: 25px;
+
   .columns-wrapper {
     width: 100%;
-    color: #333333;
+    width: 1000px;
+    color: #666666;
     padding: 0 80px;
     h2 {
-      margin-left: 2rem;
+      font-weight: 400;
     }
 
     .stats-item {
@@ -15,7 +20,7 @@
       display: inline-block;
 
       .stats-item-wrap {
-        padding: 20px;
+        padding: 14px;
         line-height: 1;
 
         .stats-label {
@@ -23,11 +28,11 @@
           line-height: 1;
         }
         .stats-value {
-          font-size: 2rem;
-          margin-top: 0.5rem;
+          font-size: 2.25rem;
+          margin-top: 0.6rem;
         }
         .font-sm {
-          font-size: 1.1rem;
+          font-size: 1.2rem;
         }
       }
     }

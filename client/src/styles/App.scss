@@ -3,6 +3,7 @@
 @import "./variables.scss";
 @import "./components/header.scss";
 @import "./components/home.scss";
+@import "./components/prediction.scss";
 @import "./components/standings.scss";
 @import "./components/statistics.scss";
 @import "./components/featured.scss";
@@ -14,6 +15,9 @@ html {
   margin: 0;
   padding: 0;
   height: 100%;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: #ffffff;
 }
 
 body {
@@ -29,6 +33,7 @@ body {
 
 .header-top {
   padding-top: 25px;
+  display: initial;
 }
 .container {
   margin: 0 auto;

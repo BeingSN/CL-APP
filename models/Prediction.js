@@ -1,12 +1,11 @@
 const mongoose = require("mongoose");
 
 const PredictionSchema = new mongoose.Schema({
-  text: {
-    type: String,
-    trim: true,
-    required: [true, "Please add some text"],
-  },
   score1: {
+    type: Number,
+    required: [true, "Please add a number"],
+  },
+  score2: {
     type: Number,
     required: [true, "Please add a number"],
   },

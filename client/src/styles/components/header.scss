@@ -6,12 +6,15 @@
   z-index: 1;
   //   width: 100%;
   flex: 1;
+  display: inline; //for sticky
   .container-sticky {
     position: sticky;
-    display: flex;
+    // display: flex;
 
     top: 0;
     .col-left {
+      float: left;
+      width: 15%;
       .wrapper {
         padding: 0 40px;
         nav {

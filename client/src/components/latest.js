@@ -60,13 +60,15 @@ const forwards = [
 const Latest = () => {
   return (
     <section className="latest">
-      <h2>Latest</h2>
+      <div className="section-heading">
+        <h2>Latest</h2>
+      </div>
       <div className="squad-container">
         <div className="field">
           <h4>Squad of the Season</h4>
           <p>
-            UEFA's Technical Observers have chosen their 23-man squad from the
-            2019/20 UEFA Champions League.
+            UEFA's Technical Observers have chosen their 23-man squad <br />
+            from the 2019/20 UEFA Champions League.
           </p>
           <div className="grid players">
             <h4 className="g-label-1">goalkeepers</h4>
