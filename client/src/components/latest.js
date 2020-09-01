@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useState } from "react";
+import Popover, { ArrowContainer } from "react-tiny-popover";
 
 import marquinhos from "../assets/images/marquinhos.webp";
 import mbappe from "../assets/images/mbappe.webp";
@@ -58,6 +59,15 @@ const forwards = [
 ];
 
 const Latest = () => {
+  const [isPopoverOpen, setIsPopoverOpen] = useState(false);
+  const [activePopover, setActivePopover] = useState(null);
+
+  const handleClick = (e, index) => setActivePopover(index);
+  const handleClickOutside = () => {
+    setIsPopoverOpen(false);
+    setActivePopover(null);
+  };
+
   return (
     <section className="latest">
       <div className="section-heading">
@@ -73,15 +83,38 @@ const Latest = () => {
           <div className="grid players">
             <h4 className="g-label-1">goalkeepers</h4>
             <div className="inner-grid goalkeepers">
-              {goalkeepers.map((el) => (
-                <div
-                  className="player goalkeeper"
-                  // key={el.name}
-                  // onMouseEnter={() => handleCity(el.image)}
-                  // onMouseOut={handleCityReturn}
-                >
-                  <img src={el.image} alt="" />
-                  <span>{el.name}</span>
+              {goalkeepers.map((el, index) => (
+                <div key={el.name}>
+                  <Popover
+                    // isOpen={isPopoverOpen}
+                    isOpen={activePopover === index}
+                    position={"left"} // preferred position
+                    containerClassName={"popover"}
+                    disableReposition
+                    content={<div>Hi! I'm popover content.</div>}
+                    // onClickOutside={() => setIsPopoverOpen(false)}
+                    onClickOutside={handleClickOutside}
+                    content={({ position, targetRect, popoverRect }) => (
+                      <div
+                        style={{ backgroundColor: "blue", opacity: 0.7 }}
+                        onClick={() => setIsPopoverOpen(!isPopoverOpen)}
+                      >
+                        Hi! I'm popover content. Here's my position: {position}.
+                      </div>
+                    )}
+                  >
+                    <div
+                      // onClick={() => setIsPopoverOpen(!isPopoverOpen)}
+                      onClick={(e) => handleClick(e, index)}
+                      className="player goalkeeper"
+                      // key={el.name}
+                      // onMouseEnter={() => handleCity(el.image)}
+                      // onMouseOut={handleCityReturn}
+                    >
+                      <img src={el.image} alt="" />
+                      <span>{el.name}</span>
+                    </div>
+                  </Popover>
                 </div>
               ))}
             </div>

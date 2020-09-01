@@ -1,7 +1,7 @@
 .stats-container {
   background: antiquewhite;
-  margin-top: 2rem;
-  margin-bottom: 2rem;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
   border-top: 1px solid #eeeeee;
   border-bottom: 1px solid #eeeeee;
   padding: 25px;
@@ -26,6 +26,7 @@
         .stats-label {
           font-size: 0.9rem;
           line-height: 1;
+          color: $darkerBlue;
         }
         .stats-value {
           font-size: 2.25rem;

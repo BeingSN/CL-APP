@@ -1,16 +1,16 @@
-const Prediction = require("../models/Prediction");
+const TeamInfo = require("../models/TeamInfo");
 
 // @desc Get all standings
-// @route  GET /api/v1/standings
+// @route  GET /api/v1/teaminfo
 // @access  Public
 
-exports.getPredictions = async (req, res, next) => {
+exports.getTeamInfo = async (req, res, next) => {
   try {
-    const predictions = await Prediction.find();
+    const teamInfo = await TeamInfo.find();
     return res.status(200).json({
       success: true,
-      count: predictions.length,
-      data: predictions,
+      count: teamInfo.length,
+      data: teamInfo,
     });
   } catch (err) {
     return res.status(500).json({
@@ -20,14 +20,14 @@ exports.getPredictions = async (req, res, next) => {
   }
 };
 
-exports.addPrediction = async (req, res, next) => {
+exports.addTeamInfo = async (req, res, next) => {
   try {
-    const { score1, score2 } = req.body;
-    const prediction = await Prediction.create(req.body);
+    const { name, shortName, crestUrl, venue } = req.body;
+    const teamInfo = await TeamInfo.create(req.body);
 
     return res.status(201).json({
       success: true,
-      data: prediction,
+      data: teamInfo,
     });
   } catch (err) {
     if (err.name === "ValidationError") {
@@ -44,16 +44,16 @@ exports.addPrediction = async (req, res, next) => {
     }
   }
 };
-exports.deletePrediction = async (req, res, next) => {
+exports.deleteTeamInfo = async (req, res, next) => {
   try {
-    const prediction = await Prediction.findById(req.params.id);
-    if (!prediction) {
+    const teamInfo = await TeamInfo.findById(req.params.id);
+    if (!teamInfo) {
       return res.status(404).json({
         success: false,
-        error: "No prediction found",
+        error: "No TeamInfo found",
       });
     }
-    await prediction.remove();
+    await teamInfo.remove();
     return res.status(200).json({
       success: true,
       data: {},

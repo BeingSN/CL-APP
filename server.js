@@ -7,6 +7,7 @@ const fetch = require("node-fetch");
 dotenv.config({ path: "./config/config.env" });
 connectDB();
 const predictions = require("./routes/predictions");
+const teamInfo = require("./routes/teamInfo");
 const fixtures = require("./routes/fixtures");
 
 const app = express();
@@ -21,6 +22,8 @@ const headers = {
 };
 
 app.use("/api/v1/predictions", predictions);
+
+app.use("/api/v1/teamInfo", teamInfo);
 
 app.get("/api/v1/standings", (req, res) => {
   fetch(url, { method: "GET", headers: headers })
