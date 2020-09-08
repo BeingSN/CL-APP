@@ -9,11 +9,15 @@ import { GlobalProvider } from "./context/globalContext";
 import Hero from "./components/hero";
 import Footer from "./components/footer";
 import TeamPage from "./components/teamPage";
+import AboutPage from "./components/aboutPage";
+import HistoryPage from "./components/historyPage";
 
 function App() {
   return (
     <GlobalProvider>
       <Router>
+        <Route path="/about" exact component={AboutPage} />
+        <Route path="/history" exact component={HistoryPage} />
         <Route path="/teams/:id" exact component={TeamPage} />
         <Route path="/" exact>
           <div className="App">

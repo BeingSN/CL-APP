@@ -26,10 +26,6 @@ const TeamPage = ({ match, location }) => {
       });
   }, []);
 
-  const sectionStyle = {
-    backgroundImage: `url(${logo})`,
-  };
-
   if (team) {
     return (
       <>
