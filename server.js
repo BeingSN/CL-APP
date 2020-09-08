@@ -15,7 +15,7 @@ const app = express();
 app.use(express.json());
 
 const url =
-  "http://api.football-data.org/v2/competitions/2001/standings?standingType=TOTAL";
+  "http://api.football-data.org/v2/competitions/2001/standings?standingType=TOTAL&season=2019";
 const headers = {
   "Content-Type": "application/json",
   "X-Auth-Token": process.env.API_TOKEN,
@@ -23,7 +23,23 @@ const headers = {
 
 app.use("/api/v1/predictions", predictions);
 
-app.use("/api/v1/teamInfo", teamInfo);
+app.get("/api/v1/teams/:id", (req, res) => {
+  let id = req.params.id;
+  console.log(req.params.id);
+  fetch(`http://api.football-data.org/v2/teams/${id}`, {
+    method: "GET",
+    headers: headers,
+  })
+    .then((res) => {
+      return res.json();
+    })
+    .then((data) => {
+      res.send({ data });
+    });
+
+  // let team = data.filter((t) => t.id === id);
+  // return res.json({ message: "team is", data: team });
+});
 
 app.get("/api/v1/standings", (req, res) => {
   fetch(url, { method: "GET", headers: headers })
@@ -31,7 +47,6 @@ app.get("/api/v1/standings", (req, res) => {
       return res.json();
     })
     .then((data) => {
-      let newData = data;
       res.send({ data });
     });
 });

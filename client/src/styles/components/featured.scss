@@ -1,5 +1,10 @@
 .featured {
   position: relative;
+  .featured-container-player {
+    .heading {
+      margin-left: 2rem;
+    }
+  }
   .featured-container-goal {
     margin-left: 11rem;
   }
@@ -10,11 +15,7 @@
     margin-bottom: 2.5rem;
     width: 80%;
     .heading {
-      text-transform: uppercase;
-      h2 {
-        font-size: 1.1rem;
-      }
-
+      font-weight: 300;
       .name {
         font-size: 1.8rem;
       }

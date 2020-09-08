@@ -3,6 +3,7 @@ import React from "react";
 const data = {
   playerName: "Neuer",
   position: "goalkeeper",
+  team: "Bayern",
   saves: "3",
   passing: "85%",
 };
@@ -14,7 +15,9 @@ const Featured = () => {
         <div className="heading">
           <h2>Featured player</h2>
           <p className="name">{data.playerName}</p>
-          <p>{data.position}</p>
+          <p>
+            {data.position} | {data.team}
+          </p>
         </div>
 
         <div className="img-bg img-bg-player">

@@ -1,4 +1,5 @@
 import React, { useContext, useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import { GlobalContext } from "../context/globalContext";
 
 // import { response } from "express";
@@ -24,11 +25,13 @@ const Standings = () => {
   return (
     <>
       <div className="s-container">
-        <h4 className="title">Standings</h4>
+        <h4 className="title">
+          Standings <span className="title-sub">2019 - 2020 season</span>
+        </h4>
         <hr></hr>
         {standings.data
-          ? standings.data.standings.map((s) => (
-              <table className="table-standings">
+          ? standings.data.standings.map((s, index) => (
+              <table key={index} className="table-standings">
                 <thead>
                   <tr className="s-labels">
                     <th className="s-icon table-col-10"></th>
@@ -45,7 +48,11 @@ const Standings = () => {
                     <td className="s-icon table-col-10">
                       <img src={s.table[0].team.crestUrl} />
                     </td>
-                    <td className="s-teamname">{s.table[0].team.name}</td>
+                    <td className="s-teamname">
+                      <Link to={`/teams/${s.table[0].team.id}`}>
+                        {s.table[0].team.name}
+                      </Link>
+                    </td>
                     <td className="s-played table-col-10">
                       {s.table[0].playedGames}
                     </td>
@@ -59,7 +66,11 @@ const Standings = () => {
                     <td className="s-icon table-col-10">
                       <img src={s.table[1].team.crestUrl} />
                     </td>
-                    <td className="s-teamname">{s.table[1].team.name}</td>
+                    <td className="s-teamname">
+                      <Link to={`/teams/${s.table[1].team.id}`}>
+                        {s.table[1].team.name}
+                      </Link>
+                    </td>
                     <td className="s-played table-col-10">
                       {s.table[1].playedGames}
                     </td>
@@ -73,7 +84,11 @@ const Standings = () => {
                     <td className="s-icon table-col-10">
                       <img src={s.table[2].team.crestUrl} />
                     </td>
-                    <td className="s-teamname">{s.table[2].team.name}</td>
+                    <td className="s-teamname">
+                      <Link to={`/teams/${s.table[2].team.id}`}>
+                        {s.table[2].team.name}
+                      </Link>
+                    </td>
                     <td className="s-played table-col-10">
                       {s.table[2].playedGames}
                     </td>
@@ -87,7 +102,11 @@ const Standings = () => {
                     <td className="s-icon table-col-10">
                       <img src={s.table[3].team.crestUrl} />
                     </td>
-                    <td className="s-teamname">{s.table[3].team.name}</td>
+                    <td className="s-teamname">
+                      <Link to={`/teams/${s.table[3].team.id}`}>
+                        {s.table[3].team.name}
+                      </Link>
+                    </td>
                     <td className="s-played table-column-10">
                       {s.table[3].playedGames}
                     </td>

@@ -1,9 +1,18 @@
 table {
   border-collapse: collapse;
+  a {
+    color: initial;
+  }
 }
 
 .s-container {
   padding: 0 20px;
+
+  .title-sub {
+    letter-spacing: 1px;
+    color: #2b2b32;
+    font-size: 11px;
+  }
 }
 
 .standings-wrapper {

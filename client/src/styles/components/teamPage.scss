@@ -1,0 +1,55 @@
+.team-page-wrapper {
+  flex: 4;
+  font-size: 18px;
+  line-height: 1.8;
+
+  .logo-container {
+    padding-top: 1.5rem;
+  }
+
+  .mw {
+    max-width: 1000px;
+
+    .banner {
+      justify-content: space-between;
+      padding-top: 2rem;
+      .title {
+        .labels {
+          span {
+            display: inline-block;
+            margin-right: 1rem;
+            font-size: 1.1rem;
+            color: $darkerBlue;
+            border: 1px solid $darkerBlue;
+            padding: 4px;
+          }
+        }
+        h1 {
+          font-size: 3rem;
+          font-weight: 300;
+        }
+      }
+      img.emblem {
+        width: 280px;
+      }
+    }
+  }
+
+  h4.label {
+    font-size: 1.8rem;
+    color: #2b2b32;
+
+    letter-spacing: 1.5px;
+    width: 40%;
+    margin-bottom: 0;
+  }
+
+  hr {
+    margin-top: 4px;
+    margin-bottom: 4px;
+  }
+}
+
+li {
+  list-style-type: decimal-leading-zero;
+}
