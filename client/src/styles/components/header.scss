@@ -1,22 +1,21 @@
 .header {
   //   position: absolute;
   mix-blend-mode: difference;
-  //   left: 0;
-  //   top: 0;
   z-index: 1;
-  //   width: 100%;
+
   flex: 1;
   display: inline; //for sticky
   .container-sticky {
     position: sticky;
-    // display: flex;
-
     top: 0;
+    z-index: 999;
+    mix-blend-mode: difference;
     .col-left {
       float: left;
       width: 15%;
       .wrapper {
         padding: 0 40px;
+        padding-top: calc(20 / 750 * 100vw);
         nav {
           ul {
             li {

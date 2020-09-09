@@ -11,6 +11,7 @@
 @import "./components/footer.scss";
 @import "./components/teamPage.scss";
 @import "./components/aboutPage.scss";
+@import "./components/historyPage.scss";
 
 body,
 html {
@@ -20,6 +21,7 @@ html {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background: #ffffff;
+  color: #2b2b2b;
 }
 
 body {
@@ -44,6 +46,7 @@ h2 {
 }
 .container {
   margin: 0 auto;
+  line-height: 1.5;
 }
 
 .row {
@@ -75,4 +78,12 @@ hr {
 
 .grid {
   display: grid;
+}
+
+.mw {
+  max-width: 1000px;
+}
+
+.logo-container {
+  padding-top: 2rem;
 }

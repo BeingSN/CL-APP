@@ -1,7 +1,28 @@
 .about-page-wrapper {
   flex: 4;
 
+  h1 {
+    font-size: 3rem;
+    font-weight: 300;
+  }
+
   .mw {
-    max-width: 1000px;
+    .row {
+      margin: 2rem 0;
+    }
+
+    .banner-img {
+      text-align: center;
+      margin: 0 auto;
+      width: 100%;
+
+      img {
+        width: 100%;
+      }
+    }
+
+    li {
+      list-style-type: inherit;
+    }
   }
 }
