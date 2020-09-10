@@ -1,5 +1,10 @@
 import React from "react";
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  NavLink,
+} from "react-router-dom";
 
 const Header = () => {
   return (
@@ -10,16 +15,18 @@ const Header = () => {
             <nav>
               <ul className="menu">
                 <li>
-                  <Link to="/about">About</Link>
+                  <NavLink to="/about" activeStyle={{ fontWeight: "bold" }}>
+                    About
+                  </NavLink>
                 </li>
                 <li>
-                  <Link to="/">Latest</Link>
+                  <NavLink to="/">Latest</NavLink>
                 </li>
                 <li>
-                  <Link to="/">Fixtures</Link>
+                  <NavLink to="/">Fixtures</NavLink>
                 </li>
                 <li>
-                  <Link to="/history">History</Link>
+                  <NavLink to="/history">History</NavLink>
                 </li>
               </ul>
             </nav>

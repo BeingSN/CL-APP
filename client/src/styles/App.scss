@@ -85,5 +85,24 @@ hr {
 }
 
 .logo-container {
-  padding-top: 2rem;
+  padding-top: calc(30 / 750 * 100vw);
+}
+
+.page-enter {
+  opacity: 0;
+}
+
+.page-enter-active {
+  opacity: 1;
+  transition: opacity 400ms;
+  transition-delay: 600ms;
+}
+
+.page-exit {
+  opacity: 1;
+}
+
+.page-exits-active {
+  opacity: 0;
+  transition: opacity 400ms;
 }

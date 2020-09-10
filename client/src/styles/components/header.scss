@@ -1,15 +1,11 @@
 .header {
-  //   position: absolute;
   mix-blend-mode: difference;
   z-index: 1;
-
   flex: 1;
   display: inline; //for sticky
   .container-sticky {
-    position: sticky;
-    top: 0;
-    z-index: 999;
-    mix-blend-mode: difference;
+    position: relative;
+    z-index: 99;
     .col-left {
       float: left;
       width: 15%;
