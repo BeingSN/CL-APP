@@ -1,11 +1,59 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Header from "./header";
 import Footer from "./footer";
 import logo from "../assets/images/logo.svg";
 import { Link } from "react-router-dom";
 import history from "../assets/images/ball.jpg";
 
+import { gsap, TimelineLite, Power3 } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+gsap.registerPlugin(ScrollTrigger);
+
 const HistoryPage = () => {
+  let t1 = new TimelineLite({ delay: 0.3 });
+
+  useEffect(() => {
+    t1.from(
+      ".content h1",
+      3,
+      { y: 15, opacity: 0, ease: Power3.easeOut, delay: 0.2 },
+      "Start"
+    );
+    t1.staggerFrom(
+      ".middle p",
+      1,
+      { y: 30, ease: Power3.easeOut, opacity: 0 },
+      0.15,
+      "Start"
+    );
+
+    gsap.from(".footer", {
+      duration: 3,
+      y: "100",
+      opacity: 0,
+      ease: "ease-in",
+      scrollTrigger: {
+        trigger: ".footer .row",
+        markers: true,
+        start: "top 90%",
+        end: "bottom 60%",
+        toggleActions: "restart complete reverse reset",
+        //options: play, pause, resume, reset, restart, complete, reverse,none
+      },
+    });
+    // .from(
+    //   ".btn-primary",
+    //   1,
+    //   { y: 20, opacity: 0, ease: Power3.easeOut, delay: 0.4 },
+    //   0.35
+    // )
+    // .from(
+    //   ".paragraphAnimation",
+    //   1,
+    //   { y: 10, opacity: 0, ease: Power3.easeOut, delay: 0.2 },
+    //   0.35
+    // );
+  }, []);
   return (
     <>
       <div className="flex header-top">

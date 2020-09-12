@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useEffect } from "react";
+import { gsap, TimelineLite, power3 } from "gsap";
 
 const data = {
   playerName: "Neuer",

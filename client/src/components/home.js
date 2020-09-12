@@ -84,28 +84,6 @@ const Home = () => {
           <Statistics />
           <Featured />
         </div>
-
-        <main>
-          {status === "idle" && (
-            <div> Let's get started by searching for an article! </div>
-          )}
-          {status === "error" && <div>{error}</div>}
-          {status === "fetching" && <div className="loading"></div>}
-          {status === "fetched" && (
-            <>
-              <div className="query"> Search results for {query} </div>
-              {articles.length === 0 && <div> No articles found! :( </div>}
-              {articles.map((article) => (
-                <div className="article" key={article.objectID}>
-                  <a target="_blank" href="/" rel="noopener noreferrer">
-                    {article.group}
-                  </a>{" "}
-                  by {article.type}
-                </div>
-              ))}
-            </>
-          )}
-        </main>
       </div>
     </div>
   );

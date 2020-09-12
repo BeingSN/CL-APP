@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./styles/App.scss";
 import { BrowserRouter as Router, Route } from "react-router-dom";
 
@@ -11,10 +11,60 @@ import Footer from "./components/footer";
 import TeamPage from "./components/teamPage";
 import AboutPage from "./components/aboutPage";
 import HistoryPage from "./components/historyPage";
-import { gsap } from "gsap";
+
 import { CSSTransition } from "react-transition-group";
+import { gsap, TimelineLite, Power3 } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+gsap.registerPlugin(ScrollTrigger);
 
 function App() {
+  let t1 = new TimelineLite({ delay: 0.3 });
+
+  useEffect(() => {
+    t1.from(
+      ".content h1",
+      3,
+      { y: 15, opacity: 0, ease: Power3.easeOut, delay: 0.2 },
+      "Start"
+    );
+    t1.staggerFrom(
+      ".middle p",
+      1,
+      { y: 30, ease: Power3.easeOut, opacity: 0 },
+      0.15,
+      "Start"
+    );
+
+    gsap.from(".latest", {
+      duration: 1.5,
+      y: "300",
+      opacity: 0,
+      ease: "ease-in",
+      scrollTrigger: {
+        trigger: ".section-heading h2",
+        markers: true,
+        start: "top center",
+        toggleActions: "play none none reverse",
+      },
+    });
+
+    gsap.from(".featured", {
+      duration: 1.5,
+      y: "300",
+      opacity: 0,
+      ease: "ease-in",
+      scrollTrigger: {
+        trigger: ".heading h2",
+        markers: true,
+        start: "top center",
+        toggleActions: "play none none reverse",
+
+        // toggleActions: "restart complete reverse reset",
+        //options: play, pause, resume, reset, restart, complete, reverse,none
+      },
+    });
+  }, []);
+
   const onEnter = (node) => {
     gsap.from(
       [node.children[0].firstElementChild, node.children[0].lastElementChild],

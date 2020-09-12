@@ -2,7 +2,7 @@ import React from "react";
 
 const Footer = () => {
   return (
-    <footer>
+    <footer className="footer">
       <div className="container">
         <div className="row">
           <h4>UEFA Champions League</h4>
