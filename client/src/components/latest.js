@@ -314,7 +314,7 @@ const Latest = () => {
   };
 
   return (
-    <section className="latest">
+    <section className="latest" id="latest">
       <div className="section-heading">
         <h2>Latest</h2>
       </div>

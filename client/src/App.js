@@ -42,9 +42,9 @@ function App() {
       ease: "ease-in",
       scrollTrigger: {
         trigger: ".section-heading h2",
-        markers: true,
-        start: "top center",
-        toggleActions: "play none none reverse",
+
+        start: "top center+=100",
+        toggleActions: "play none none none",
       },
     });
 
@@ -55,12 +55,9 @@ function App() {
       ease: "ease-in",
       scrollTrigger: {
         trigger: ".heading h2",
-        markers: true,
-        start: "top center",
-        toggleActions: "play none none reverse",
 
-        // toggleActions: "restart complete reverse reset",
-        //options: play, pause, resume, reset, restart, complete, reverse,none
+        start: "top center+=100",
+        toggleActions: "play none none none",
       },
     });
   }, []);

@@ -5,6 +5,7 @@ import {
   Route,
   NavLink,
 } from "react-router-dom";
+import { ReactComponent as MyLogo } from "../assets/images/ucl-app-logo.svg";
 
 const Header = () => {
   return (
@@ -15,18 +16,30 @@ const Header = () => {
             <nav>
               <ul className="menu">
                 <li>
+                  <NavLink to="/">
+                    <MyLogo />
+                  </NavLink>
+                </li>
+
+                <li>
                   <NavLink to="/about" activeStyle={{ fontWeight: "bold" }}>
                     About
                   </NavLink>
                 </li>
                 <li>
-                  <NavLink to="/">Latest</NavLink>
+                  <NavLink to="#latest" activeStyle={{ fontWeight: "bold" }}>
+                    Latest
+                  </NavLink>
                 </li>
                 <li>
-                  <NavLink to="/">Fixtures</NavLink>
+                  <NavLink to="/" activeStyle={{ fontWeight: "bold" }}>
+                    Fixtures
+                  </NavLink>
                 </li>
                 <li>
-                  <NavLink to="/history">History</NavLink>
+                  <NavLink to="/history" activeStyle={{ fontWeight: "bold" }}>
+                    History
+                  </NavLink>
                 </li>
               </ul>
             </nav>
