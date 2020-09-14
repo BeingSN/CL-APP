@@ -1,0 +1,32 @@
+.fixtures-page-wrapper {
+  flex: 4;
+
+  h1 {
+    font-size: 3rem;
+    font-weight: 300;
+  }
+
+  .mw {
+    .match-row:not(:first-of-type) {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-gap: 5px;
+    }
+
+    .match-row {
+      margin: 1.75rem 0;
+    }
+    .match-box {
+      height: 80px;
+      display: flex;
+      width: 90%;
+      justify-content: space-evenly;
+      margin: 0 auto;
+      align-items: center;
+      background-color: #fff9f4;
+    }
+    .final {
+      width: 100%;
+    }
+  }
+}

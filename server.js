@@ -20,6 +20,8 @@ const headers = {
   "Content-Type": "application/json",
   "X-Auth-Token": process.env.API_TOKEN,
 };
+const fixturesUrl =
+  "http://api.football-data.org/v2/competitions/2001/matches?season=2019&stage=ROUND_OF_16,QUARTER_FINALS,SEMI_FINALS,FINAL";
 
 app.use("/api/v1/predictions", predictions);
 
@@ -51,7 +53,15 @@ app.get("/api/v1/standings", (req, res) => {
     });
 });
 
-// app.use("/api/v1/fixtures", fixtures);
+app.get("/api/v1/fixtures", (req, res) => {
+  fetch(fixturesUrl, { method: "GET", headers: headers })
+    .then((res) => {
+      return res.json();
+    })
+    .then((data) => {
+      res.send({ data });
+    });
+});
 
 if (process.env.NODE_ENV === "production") {
   app.use(express.static("client/build"));

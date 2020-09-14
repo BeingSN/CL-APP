@@ -27,12 +27,12 @@ const Header = () => {
                   </NavLink>
                 </li>
                 <li>
-                  <NavLink to="#latest" activeStyle={{ fontWeight: "bold" }}>
+                  <NavLink to="/latest" activeStyle={{ fontWeight: "bold" }}>
                     Latest
                   </NavLink>
                 </li>
                 <li>
-                  <NavLink to="/" activeStyle={{ fontWeight: "bold" }}>
+                  <NavLink to="/fixtures" activeStyle={{ fontWeight: "bold" }}>
                     Fixtures
                   </NavLink>
                 </li>

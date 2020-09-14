@@ -15,6 +15,8 @@ import HistoryPage from "./components/historyPage";
 import { CSSTransition } from "react-transition-group";
 import { gsap, TimelineLite, Power3 } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import Fixtures from "./components/fixtures";
+import LatestPage from "./components/latestPage";
 gsap.registerPlugin(ScrollTrigger);
 
 function App() {
@@ -112,6 +114,8 @@ function App() {
         </Route>
         <Route path="/history" exact component={HistoryPage} />
         <Route path="/teams/:id" exact component={TeamPage} />
+        <Route path="/fixtures" exact component={Fixtures} />
+        <Route path="/latest" exact component={LatestPage} />
         <Route path="/" exact>
           {({ match }) => (
             <CSSTransition

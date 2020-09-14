@@ -1,0 +1,36 @@
+.latest-page-wrapper {
+  flex: 4;
+
+  h1 {
+    font-size: 3rem;
+    font-weight: 300;
+  }
+
+  .mw {
+    .row {
+      margin: 2rem 0;
+    }
+
+    .team {
+      flex: 1;
+
+      h4 {
+        font-size: 1.5rem;
+      }
+    }
+
+    .banner-img {
+      flex: 1;
+      text-align: center;
+      margin: 0 auto;
+
+      img {
+        width: 100%;
+      }
+    }
+
+    li {
+      list-style-type: inherit;
+    }
+  }
+}
