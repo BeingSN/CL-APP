@@ -92,7 +92,7 @@ const Header = ({ history }) => {
             </NavLink>
           </div>
 
-          <div class="menu">
+          <div className="menu">
             <button onClick={handleMenu} disabled={disabled}>
               {state.menuName}
             </button>

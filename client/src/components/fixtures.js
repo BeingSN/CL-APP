@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-import logo from "../assets/images/logo.svg";
 import { Link } from "react-router-dom";
 import Footer from "./footer";
 import Header from "./header";
@@ -27,12 +26,8 @@ const Fixtures = () => {
       <div className="flex header-top">
         <Header />
         <div className="fixtures-page-wrapper">
-          <div className="logo-container">
-            <Link to="/">
-              <img src={logo} />
-            </Link>
-          </div>
-          <div class="container mw">
+          <div className="logo-container"></div>
+          <div className="container mw">
             <h2>Final</h2>
             <div className="match-row final">
               {fixtures.length > 2

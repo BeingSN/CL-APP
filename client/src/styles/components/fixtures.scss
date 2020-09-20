@@ -4,13 +4,22 @@
   h1 {
     font-size: 3rem;
     font-weight: 300;
+    @media screen and (max-width: 768px) {
+      font-size: 2rem;
+    }
   }
 
   .mw {
+    @media screen and (max-width: 768px) {
+      padding: 0 20px;
+    }
     .match-row:not(:first-of-type) {
       display: grid;
       grid-template-columns: 1fr 1fr;
       grid-gap: 5px;
+      @media screen and (max-width: 768px) {
+        grid-template-columns: 1fr;
+      }
     }
 
     .match-row {
@@ -23,6 +32,10 @@
       justify-content: space-evenly;
       margin: 0 auto;
       align-items: center;
+      font-size: 12px;
+      .score {
+        font-weight: 600;
+      }
     }
     .final {
       width: 100%;

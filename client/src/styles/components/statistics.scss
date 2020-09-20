@@ -10,7 +10,8 @@
     background-color: #fff9f4;
     @media screen and (max-width: 768px) {
       width: 100%;
-      padding: 0;
+      padding: 20px 10px;
+      box-sizing: border-box;
     }
     h2 {
       font-weight: 400;
@@ -36,6 +37,9 @@
         .stats-value {
           font-size: 2.25rem;
           margin-top: 0.6rem;
+          @media screen and (max-width: 768px) {
+            font-size: 2rem;
+          }
         }
         .font-sm {
           font-size: 1.2rem;

@@ -11,11 +11,7 @@ const AboutPage = () => {
       <div className="flex header-top">
         <Header />
         <div className="about-page-wrapper">
-          <div className="logo-container">
-            <Link to="/">
-              <img src={logo} />
-            </Link>
-          </div>
+          <div className="logo-container"></div>
           <div className="container mw">
             <h1>About</h1>
 

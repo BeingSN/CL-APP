@@ -3,12 +3,21 @@
   line-height: 1.8;
 
   .mw {
+    @media screen and (max-width: 768px) {
+      padding: 0 20px;
+    }
     h1 {
       font-size: 3rem;
       font-weight: 300;
+      @media screen and (max-width: 768px) {
+        font-size: 2rem;
+      }
     }
 
     .flex {
+      @media screen and (max-width: 768px) {
+        flex-direction: column-reverse;
+      }
       .middle {
         flex: 4;
         p {

@@ -30,6 +30,13 @@ function App() {
       "Start"
     );
     t1.staggerFrom(
+      ".sidebar",
+      1,
+      { y: 30, ease: Power3.easeOut, opacity: 0 },
+      0.15,
+      "Start"
+    );
+    t1.staggerFrom(
       ".middle p",
       1,
       { y: 30, ease: Power3.easeOut, opacity: 0 },

@@ -377,19 +377,19 @@ const Latest = () => {
                           <div className="flex">
                             <div className="inner-row">
                               <div className="">
-                                <span class="label">matches</span>
+                                <span className="label">matches</span>
                                 <span className="value">{el.matches}</span>
                               </div>
                             </div>
-                            <div class="inner-row">
+                            <div className="inner-row">
                               <div className="">
-                                <span class="label">minutes</span>
+                                <span className="label">minutes</span>
                                 <span className="value">{el.minutes}</span>
                               </div>
                             </div>
                             <div className="inner-row">
                               <div className="">
-                                <span class="label">saves</span>
+                                <span className="label">saves</span>
                                 <span className="value">{el.saves}</span>
                               </div>
                             </div>
@@ -465,11 +465,11 @@ const Latest = () => {
                           <div className="flex">
                             <div className="inner-row">
                               <div className="">
-                                <span class="label">matches</span>
+                                <span className="label">matches</span>
                                 <span className="value">{el.matches}</span>
                               </div>
                             </div>
-                            <div class="inner-row">
+                            <div className="inner-row">
                               <div className="">
                                 <span className="label">minutes</span>
                                 <span className="value">{el.minutes}</span>
@@ -658,7 +658,7 @@ const Latest = () => {
                                   <span className="value">{el.matches}</span>
                                 </div>
                               </div>
-                              <div class="inner-row">
+                              <div className="inner-row">
                                 <div className="">
                                   <span className="label">minutes</span>
                                   <span className="value">{el.minutes}</span>

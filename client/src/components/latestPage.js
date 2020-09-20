@@ -1,7 +1,6 @@
 import React from "react";
 import Header from "./header";
 import Footer from "./footer";
-import logo from "../assets/images/logo.svg";
 import { Link } from "react-router-dom";
 import mainImg from "../assets/images/bayern-flag.jpg";
 
@@ -11,11 +10,7 @@ const LatestPage = () => {
       <div className="flex header-top">
         <Header />
         <div className="latest-page-wrapper">
-          <div className="logo-container">
-            <Link to="/">
-              <img src={logo} />
-            </Link>
-          </div>
+          <div className="logo-container"></div>
           <div className="container mw">
             <h1>Latest</h1>
 

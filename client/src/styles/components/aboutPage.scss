@@ -4,9 +4,16 @@
   h1 {
     font-size: 3rem;
     font-weight: 300;
+    @media screen and (max-width: 768px) {
+      font-size: 2rem;
+    }
   }
 
   .mw {
+    @media screen and (max-width: 768px) {
+      padding: 0 20px;
+      box-sizing: border-box;
+    }
     .row {
       margin: 2rem 0;
     }
