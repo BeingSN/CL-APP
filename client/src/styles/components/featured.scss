@@ -7,6 +7,15 @@
   }
   .featured-container-goal {
     margin-left: 11rem;
+    @media screen and (max-width: 768px) {
+      margin-left: 0;
+    }
+    &.motm {
+      margin-left: 17rem;
+      @media screen and (max-width: 768px) {
+        margin-left: 0;
+      }
+    }
   }
   .featured-container-player,
   .featured-container-goal {
@@ -14,6 +23,9 @@
     flex-wrap: wrap;
     margin-bottom: 2.5rem;
     width: 80%;
+    @media screen and (max-width: 768px) {
+      width: 100%;
+    }
     .heading {
       font-weight: 300;
       .name {
@@ -25,6 +37,9 @@
     }
     .img-bg-goal {
       background: url("../../assets/images/goal.webp");
+    }
+    .img-bg-motm {
+      background: url("../../assets/images/motm.webp");
     }
     .img-bg {
       width: 100%;
@@ -41,7 +56,7 @@
         & > div {
           text-align: center;
           background: black;
-          opacity: 0.8;
+          opacity: 0.9;
           padding: 10px;
         }
 
@@ -59,5 +74,12 @@
         }
       }
     }
+  }
+}
+
+.motm {
+  margin-left: 17rem;
+  @media screen and (max-width: 768px) {
+    margin-left: 0;
   }
 }

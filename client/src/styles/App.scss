@@ -57,6 +57,9 @@ h2 {
 
 .col-70 {
   width: 70%;
+  @media screen and (max-width: 768px) {
+    width: 100%;
+  }
 }
 
 .col-30 {

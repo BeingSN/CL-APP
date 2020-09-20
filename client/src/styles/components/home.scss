@@ -19,6 +19,9 @@
   top: 10%;
   width: 70%;
   float: right;
+  @media screen and (max-width: 768px) {
+    float: none;
+  }
   &:after {
     clear: both;
   }
@@ -29,6 +32,10 @@
     display: inline-block;
     // flex-direction: column;
     // flex-wrap: nowrap;
+    @media screen and (max-width: 768px) {
+      display: flex;
+      width: 100%;
+    }
 
     & > div {
       margin-bottom: 4rem;
@@ -63,11 +70,12 @@
 }
 
 .bg-vid {
-  // position: relative;
-  // position: absolute;
   left: 0;
   top: -4%;
   display: inline; //for sticky child to work
+  @media screen and (max-width: 768px) {
+    display: none;
+  }
   .sticky {
     // height: 100vh;
     // overflow: hidden;
@@ -81,10 +89,23 @@
 .hero-container {
   flex: 4;
   margin-bottom: 5rem;
+  .logo-container {
+    a {
+      img {
+        @media screen and (max-width: 768px) {
+          width: 60px;
+        }
+      }
+    }
+  }
   .banner {
     h2 {
       font-size: 5rem;
       font-weight: 300;
+
+      @media screen and (max-width: 768px) {
+        font-size: 2rem;
+      }
     }
   }
 }

@@ -23,10 +23,29 @@
       justify-content: space-evenly;
       margin: 0 auto;
       align-items: center;
-      background-color: #fff9f4;
     }
     .final {
       width: 100%;
+      .match-box {
+        background-color: aliceblue;
+      }
+    }
+
+    .quarter-finals {
+      .match-box {
+        background-color: honeydew;
+      }
+    }
+
+    .semi-finals {
+      .match-box {
+        background-color: #fff9f4;
+      }
+    }
+    .round-16 {
+      .match-box {
+        background-color: wheat;
+      }
     }
   }
 }

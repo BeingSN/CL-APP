@@ -34,7 +34,6 @@ const HistoryPage = () => {
       ease: "ease-in",
       scrollTrigger: {
         trigger: ".footer .row",
-        markers: true,
         start: "top 90%",
         end: "bottom 60%",
         toggleActions: "restart complete reverse reset",

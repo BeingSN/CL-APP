@@ -53,6 +53,26 @@ const Featured = () => {
           </div>
         </div>
       </div>
+      <div className="featured-container-goal motm row">
+        <div className="heading">
+          <h2>Man of the Match</h2>
+          <p className="name">Kingsley Coman</p>
+          <p>final match against Paris</p>
+        </div>
+
+        <div className="img-bg img-bg-motm">
+          <div className="content-box">
+            <div>
+              <div className="label">Goal that won the game</div>
+              <div className="value"> Final match</div>
+            </div>
+            <div>
+              <div className="label"></div>
+              <div className="value"></div>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
   );
 };

@@ -8,6 +8,9 @@
     width: 1000px;
     padding: 40px 80px;
     background-color: #fff9f4;
+    @media screen and (max-width: 768px) {
+      width: 100%;
+    }
     h2 {
       font-weight: 400;
     }
@@ -15,6 +18,10 @@
     .stats-item {
       width: 25%;
       display: inline-block;
+      @media screen and (max-width: 768px) {
+        display: block;
+        width: 100%;
+      }
 
       .stats-item-wrap {
         padding: 14px;
