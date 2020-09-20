@@ -59,7 +59,7 @@
   }
   .menu-layer {
     position: relative;
-    background: red;
+    background: $darkerBlue;
     height: 100%;
     overflow: hidden;
     .menu-city-background {
@@ -90,10 +90,10 @@
             margin: 0;
             li {
               list-style: none;
-              font-size: 3rem;
+              font-size: 2rem;
               font-weight: 700;
               cursor: pointer;
-              height: 135px;
+              height: 100px;
               overflow: hidden;
               position: relative;
               width: 700px;

@@ -162,13 +162,8 @@ const Hamburger = ({ state }) => {
                 </ul>
               </nav>
               <div ref={(el) => (info = el)} className="info">
-                <h3>Our Promise</h3>
-                <p>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod
-                  laborum debitis quibusdam nulla? Magni veniam adipisci
-                  corrupti quasi laboriosam, voluptate sit? Aliquam, distinctio
-                  quia aliquid suscipit explicabo quibusdam nesciunt quas?
-                </p>
+                <h3>UCL Studio</h3>
+                <p>All about the Champions League</p>
               </div>
             </div>
           </div>

@@ -333,7 +333,7 @@ const Latest = () => {
                   <Popover
                     // isOpen={isPopoverOpen}
                     isOpen={activePopover === el.name}
-                    position={"left"} // preferred position
+                    position={"top"} // preferred position
                     containerClassName={"popover"}
                     disableReposition
                     content={<div>Hi! I'm popover content.</div>}
@@ -341,7 +341,7 @@ const Latest = () => {
                     onClickOutside={handleClickOutside}
                     content={({ position, targetRect, popoverRect }) => (
                       <ArrowContainer // if you'd like an arrow, you can import the ArrowContainer!
-                        position={position}
+                        position={"top"}
                         targetRect={targetRect}
                         popoverRect={popoverRect}
                         arrowColor={"blue"}
@@ -420,7 +420,7 @@ const Latest = () => {
                   <Popover
                     // isOpen={isPopoverOpen}
                     isOpen={activePopover === el.name}
-                    position={"left"} // preferred position
+                    position={"top"} // preferred position
                     containerClassName={"popover"}
                     disableReposition
                     content={<div>Hi! I'm popover content.</div>}
@@ -514,7 +514,7 @@ const Latest = () => {
                   <Popover
                     // isOpen={isPopoverOpen}
                     isOpen={activePopover === el.name}
-                    position={"left"} // preferred position
+                    position={"top"} // preferred position
                     containerClassName={"popover"}
                     disableReposition
                     content={<div>Hi! I'm popover content.</div>}
@@ -609,7 +609,7 @@ const Latest = () => {
                     <Popover
                       // isOpen={isPopoverOpen}
                       isOpen={activePopover === el.name}
-                      position={"left"} // preferred position
+                      position={"top"} // preferred position
                       containerClassName={"popover"}
                       disableReposition
                       content={<div>Hi! I'm popover content.</div>}
