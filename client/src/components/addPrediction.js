@@ -1,10 +1,13 @@
 import React, { useState, useContext } from "react";
 import { GlobalContext } from "../context/globalContext";
 
-export const AddPrediction = () => {
-  const [score1, setScore1] = useState(0);
-  const [score2, setScore2] = useState(0);
-
+export const AddPrediction = ({
+  score1,
+  setScore1,
+  score2,
+  setScore2,
+  setRender,
+}) => {
   const { addPrediction } = useContext(GlobalContext);
 
   const onSubmit = (e) => {
@@ -16,6 +19,7 @@ export const AddPrediction = () => {
     };
 
     addPrediction(newPrediction);
+    setRender(true);
   };
 
   return (
@@ -23,7 +27,7 @@ export const AddPrediction = () => {
       <span className="sidenote">*update: match is completed</span>
       <form className="prediction-form" onSubmit={onSubmit}>
         <div className="form-control score-form">
-          <label htmlFor="amount">Paris</label>
+          <label htmlFor="amount">Lahore Qalandar</label>
           <input
             type="number"
             value={score1}
@@ -33,7 +37,7 @@ export const AddPrediction = () => {
         </div>
         <span className="colon">:</span>
         <div className="form-control score-form">
-          <label htmlFor="amount">Bayern</label>
+          <label htmlFor="amount">Karachi Kings</label>
           <input
             type="number"
             value={score2}

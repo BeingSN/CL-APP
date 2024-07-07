@@ -1,9 +1,9 @@
 import React, { useEffect } from "react";
 
 const data = {
-  playerName: "Neuer",
-  position: "goalkeeper",
-  team: "Bayern",
+  playerName: "Shaheen Afridi",
+  position: "All Rounder",
+  team: "Lahore Qalandar",
   saves: "3",
   passing: "85%",
 };
@@ -34,44 +34,10 @@ const Featured = () => {
         </div>
       </div>
       <div className="featured-container-goal row">
-        <div className="heading">
-          <h2>Featured goal</h2>
-          <p className="name">Marcel Sabitzer</p>
-          <p> Leipzig 2-1 Zenit</p>
-        </div>
-
-        <div className="img-bg img-bg-goal">
-          <div className="content-box">
-            <div>
-              <div className="label">23/10/19:</div>
-              <div className="value"> Matchday 3</div>
-            </div>
-            <div>
-              <div className="label"></div>
-              <div className="value"></div>
-            </div>
-          </div>
-        </div>
+        <div className="img-bg img-bg-goal"></div>
       </div>
       <div className="featured-container-goal motm row">
-        <div className="heading">
-          <h2>Man of the Match</h2>
-          <p className="name">Kingsley Coman</p>
-          <p>final match against Paris</p>
-        </div>
-
-        <div className="img-bg img-bg-motm">
-          <div className="content-box">
-            <div>
-              <div className="label">Goal that won the game</div>
-              <div className="value"> Final match</div>
-            </div>
-            <div>
-              <div className="label"></div>
-              <div className="value"></div>
-            </div>
-          </div>
-        </div>
+        <div className="img-bg img-bg-motm"></div>
       </div>
     </section>
   );

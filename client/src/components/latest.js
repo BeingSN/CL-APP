@@ -27,27 +27,40 @@ import gomez from "../assets/images/gomez.webp";
 
 const goalkeepers = [
   {
-    name: "Manuel Neuer",
-    team: "Bayern",
-    image: neuer,
+    name: "Shan Masood",
+    team: "Karachi Kings",
+    image:
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTOecahhQvsTYsDAaInTJQ6qcbBCnaMOu1cYQ&s",
     minutes: "990",
     matches: "28",
     saves: "25",
     height: "193cm",
   },
   {
-    name: "Jan Oblak",
-    team: "Atlético",
-    image: oblak,
+    name: "Babar Azam",
+    team: "Peshawar Zalmi",
+    image:
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTUguqFisu-oAJPfgnRgHxBypMvh_fe9k3qrg&s",
     minutes: "840",
     matches: "9",
     saves: "25",
     height: "186cm",
   },
   {
-    name: "Anthony Lopes",
-    team: "Lyon",
-    image: lopes,
+    name: "Shaheen Afridi",
+    team: "Lahore Qalandar",
+    image:
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSh0o8ftfQuBpKi4f7UOy8d65tu-XhfTsbG4A&s",
+    minutes: "900",
+    matches: "10",
+    saves: "29",
+    height: "184cm",
+  },
+  {
+    name: "Shadab Khan",
+    team: "Islamabad United",
+    image:
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRfzTyhm_r7OhYjxee601NChTxIL3eTVTXMLg&s",
     minutes: "900",
     matches: "10",
     saves: "29",
@@ -320,13 +333,10 @@ const Latest = () => {
       </div>
       <div className="squad-container">
         <div className="field">
-          <h4>Squad of the Season</h4>
-          <p>
-            UEFA's Technical Observers have chosen their 23-man squad <br />
-            from the 2019/20 UEFA Champions League.
-          </p>
+          <h4>Team of the Season</h4>
+
           <div className="grid players">
-            <h4 className="g-label-1">goalkeepers</h4>
+            <h4 className="g-label-1">Captain</h4>
             <div className="inner-grid goalkeepers">
               {goalkeepers.map((el, index) => (
                 <div key={el.name}>
@@ -410,290 +420,6 @@ const Latest = () => {
                       <span>{el.name}</span>
                     </div>
                   </Popover>
-                </div>
-              ))}
-            </div>
-            <h4 className="g-label-2">defenders</h4>
-            <div className="inner-grid defenders">
-              {defenders.map((el, index) => (
-                <div key={el.name}>
-                  <Popover
-                    // isOpen={isPopoverOpen}
-                    isOpen={activePopover === el.name}
-                    position={"top"} // preferred position
-                    containerClassName={"popover"}
-                    disableReposition
-                    content={<div>Hi! I'm popover content.</div>}
-                    // onClickOutside={() => setIsPopoverOpen(false)}
-                    onClickOutside={handleClickOutside}
-                    content={({ position, targetRect, popoverRect }) => (
-                      <ArrowContainer // if you'd like an arrow, you can import the ArrowContainer!
-                        position={position}
-                        targetRect={targetRect}
-                        popoverRect={popoverRect}
-                        arrowColor={"blue"}
-                        arrowSize={10}
-                        arrowStyle={{ opacity: 0.9 }}
-                      >
-                        <div
-                          className="popover-inner"
-                          style={{
-                            backgroundColor: "blue",
-                            opacity: 0.9,
-                            padding: "20px",
-                            color: "gray",
-                          }}
-                          onClick={() => setIsPopoverOpen(!isPopoverOpen)}
-                        >
-                          <div className="flex top-info">
-                            <div className="img-wrapper">
-                              <img src={el.image} />
-                            </div>
-                            <div className="inner-row info">
-                              <span>defender</span>
-                              <span>{el.dob}</span>
-                              <span>{el.height}</span>
-
-                              <span>{el.nat}</span>
-                            </div>
-                          </div>
-
-                          <p>
-                            {el.name} {" | "} {el.team}
-                          </p>
-
-                          <div className="flex">
-                            <div className="inner-row">
-                              <div className="">
-                                <span className="label">matches</span>
-                                <span className="value">{el.matches}</span>
-                              </div>
-                            </div>
-                            <div className="inner-row">
-                              <div className="">
-                                <span className="label">minutes</span>
-                                <span className="value">{el.minutes}</span>
-                              </div>
-                            </div>
-                            <div className="inner-row">
-                              <div className="">
-                                <span className="label">goals</span>
-                                <span className="value">{el.goals}</span>
-                              </div>
-                            </div>
-                            <div className="inner-row">
-                              <div className="">
-                                <span className="label">assists</span>
-                                <span className="value">{el.assists}</span>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </ArrowContainer>
-                    )}
-                  >
-                    <div
-                      // onClick={() => setIsPopoverOpen(!isPopoverOpen)}
-                      onClick={(e) => handleClick(e, el.name)}
-                      className="player defender"
-                      // key={el.name}
-                      // onMouseEnter={() => handleCity(el.image)}
-                      // onMouseOut={handleCityReturn}
-                    >
-                      <img src={el.image} alt="" />
-                      <span>{el.name}</span>
-                    </div>
-                  </Popover>
-                </div>
-              ))}
-            </div>
-            <h4 className="g-label-3">midfielders</h4>
-            <div className="inner-grid midfielders">
-              {midfielders.map((el, index) => (
-                <div key={el.name}>
-                  <Popover
-                    // isOpen={isPopoverOpen}
-                    isOpen={activePopover === el.name}
-                    position={"top"} // preferred position
-                    containerClassName={"popover"}
-                    disableReposition
-                    content={<div>Hi! I'm popover content.</div>}
-                    // onClickOutside={() => setIsPopoverOpen(false)}
-                    onClickOutside={handleClickOutside}
-                    content={({ position, targetRect, popoverRect }) => (
-                      <ArrowContainer // if you'd like an arrow, you can import the ArrowContainer!
-                        position={position}
-                        targetRect={targetRect}
-                        popoverRect={popoverRect}
-                        arrowColor={"blue"}
-                        arrowSize={10}
-                        arrowStyle={{ opacity: 0.9 }}
-                      >
-                        <div
-                          className="popover-inner"
-                          style={{
-                            backgroundColor: "blue",
-                            opacity: 0.9,
-                            padding: "20px",
-                            color: "gray",
-                          }}
-                          onClick={() => setIsPopoverOpen(!isPopoverOpen)}
-                        >
-                          <div className="flex top-info">
-                            <div className="img-wrapper">
-                              <img src={el.image} />
-                            </div>
-                            <div className="inner-row info">
-                              <span>defender</span>
-                              <span>{el.dob}</span>
-                              <span>{el.height}</span>
-
-                              <span>{el.nat}</span>
-                            </div>
-                          </div>
-
-                          <p>
-                            {el.name} {" | "} {el.team}
-                          </p>
-
-                          <div className="flex">
-                            <div className="inner-row">
-                              <div className="">
-                                <span className="label">matches</span>
-                                <span className="value">{el.matches}</span>
-                              </div>
-                            </div>
-                            <div className="inner-row">
-                              <div className="">
-                                <span className="label">minutes</span>
-                                <span className="value">{el.minutes}</span>
-                              </div>
-                            </div>
-                            <div className="inner-row">
-                              <div className="">
-                                <span className="label">goals</span>
-                                <span className="value">{el.goals}</span>
-                              </div>
-                            </div>
-                            <div className="inner-row">
-                              <div className="">
-                                <span className="label">assists</span>
-                                <span className="value">{el.assists}</span>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </ArrowContainer>
-                    )}
-                  >
-                    <div
-                      // onClick={() => setIsPopoverOpen(!isPopoverOpen)}
-                      onClick={(e) => handleClick(e, el.name)}
-                      className="player midfielder"
-                      // key={el.name}
-                      // onMouseEnter={() => handleCity(el.image)}
-                      // onMouseOut={handleCityReturn}
-                    >
-                      <img src={el.image} alt="" />
-                      <span>{el.name}</span>
-                    </div>
-                  </Popover>
-                </div>
-              ))}
-            </div>
-            <h4 className="g-label-4">forwards</h4>
-            <div className="inner-grid forwards">
-              {forwards.map((el, index) => (
-                <div key={el.name}>
-                  <div key={el.name}>
-                    <Popover
-                      // isOpen={isPopoverOpen}
-                      isOpen={activePopover === el.name}
-                      position={"top"} // preferred position
-                      containerClassName={"popover"}
-                      disableReposition
-                      content={<div>Hi! I'm popover content.</div>}
-                      // onClickOutside={() => setIsPopoverOpen(false)}
-                      onClickOutside={handleClickOutside}
-                      content={({ position, targetRect, popoverRect }) => (
-                        <ArrowContainer // if you'd like an arrow, you can import the ArrowContainer!
-                          position={position}
-                          targetRect={targetRect}
-                          popoverRect={popoverRect}
-                          arrowColor={"blue"}
-                          arrowSize={10}
-                          arrowStyle={{ opacity: 0.9 }}
-                        >
-                          <div
-                            className="popover-inner"
-                            style={{
-                              backgroundColor: "blue",
-                              opacity: 0.9,
-                              padding: "20px",
-                              color: "gray",
-                            }}
-                            onClick={() => setIsPopoverOpen(!isPopoverOpen)}
-                          >
-                            <div className="flex top-info">
-                              <div className="img-wrapper">
-                                <img src={el.image} />
-                              </div>
-                              <div className="inner-row info">
-                                <span>defender</span>
-                                <span>{el.dob}</span>
-                                <span>{el.height}</span>
-
-                                <span>{el.nat}</span>
-                              </div>
-                            </div>
-
-                            <p>
-                              {el.name} {" | "} {el.team}
-                            </p>
-
-                            <div className="flex">
-                              <div className="inner-row">
-                                <div className="">
-                                  <span className="label">matches</span>
-                                  <span className="value">{el.matches}</span>
-                                </div>
-                              </div>
-                              <div className="inner-row">
-                                <div className="">
-                                  <span className="label">minutes</span>
-                                  <span className="value">{el.minutes}</span>
-                                </div>
-                              </div>
-                              <div className="inner-row">
-                                <div className="">
-                                  <span className="label">goals</span>
-                                  <span className="value">{el.goals}</span>
-                                </div>
-                              </div>
-                              <div className="inner-row">
-                                <div className="">
-                                  <span className="label">assists</span>
-                                  <span className="value">{el.assists}</span>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </ArrowContainer>
-                      )}
-                    >
-                      <div
-                        // onClick={() => setIsPopoverOpen(!isPopoverOpen)}
-                        onClick={(e) => handleClick(e, el.name)}
-                        className="player forward"
-                        // key={el.name}
-                        // onMouseEnter={() => handleCity(el.image)}
-                        // onMouseOut={handleCityReturn}
-                      >
-                        <img src={el.image} alt="" />
-                        <span>{el.name}</span>
-                      </div>
-                    </Popover>
-                  </div>
                 </div>
               ))}
             </div>

@@ -50,7 +50,7 @@ const Header = ({ history }) => {
   };
   return (
     <div className="header">
-      <div className="container-sticky">
+      <div className="container-sticky ">
         <div className="col-left">
           <div className="wrapper">
             <nav>

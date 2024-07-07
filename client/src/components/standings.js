@@ -1,127 +1,120 @@
-import React, { useContext, useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import { GlobalContext } from "../context/globalContext";
-
-// import { response } from "express";
 
 const Standings = () => {
-  const [standings, setStandings] = useState("[]");
+  const [standings, setStandings] = useState([]);
 
   useEffect(() => {
-    // getstandings();
-    fetch("/api/v1/standings")
-      .then((res) => {
-        console.log("res1", res);
-        return res.json();
-      })
-      .then((res) => {
-        setStandings(res);
-      })
-      .catch((res) => {
-        console.log("error", res);
-      });
+    const staticData = {
+      data: {
+        standings: [
+          {
+            group: "GROUP_A",
+            table: [
+              {
+                team: {
+                  id: 1,
+                  name: "Karachi Kings",
+                  crestUrl:
+                    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSVKNsHV_JAyHX_yNcLgc8lgxUM7rdmtRaU5Q&s",
+                },
+                playedGames: 10,
+                won: 7,
+                lost: 3,
+                points: 21,
+              },
+              {
+                team: {
+                  id: 2,
+                  name: "Lahore Qalandar",
+                  crestUrl:
+                    "https://grassrootscricket.pk/wp-content/uploads/2024/02/grassrootscricket-lahore-qalandars-what-went-wrong.png",
+                },
+                playedGames: 10,
+                won: 6,
+                lost: 4,
+                points: 18,
+              },
+              {
+                team: {
+                  id: 3,
+                  name: "Islamabad United",
+                  crestUrl:
+                    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQYMW9op-RciWExIJtexn7y_Xwg0QEJHwQmuQ&s",
+                },
+                playedGames: 10,
+                won: 5,
+                lost: 5,
+                points: 15,
+              },
+              {
+                team: {
+                  id: 4,
+                  name: "Peshawar Zalmi",
+                  crestUrl:
+                    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRBXrxN8PJn-DGP_8K0HPQRoPcRL0F9iuJzkQ&s",
+                },
+                playedGames: 10,
+                won: 4,
+                lost: 6,
+                points: 12,
+              },
+            ],
+          },
+          // Add more groups as needed
+        ],
+      },
+    };
+    setStandings(staticData);
   }, []);
 
   return (
-    <>
-      <div className="s-container">
-        <h4 className="title">
-          Standings <span className="title-sub">2019 - 2020 season</span>
-        </h4>
-        <hr></hr>
-        {standings.data
-          ? standings.data.standings.map((s, index) => (
-              <table key={index} className="table-standings">
-                <thead>
-                  <tr className="s-labels">
-                    <th className="s-icon table-col-10"></th>
-                    <th className="s-group">{s.group.replace(/_/g, " ")}</th>
-                    <th className="s-played table-col-10">Played</th>
-                    <th className="s-won table-col-10">Won</th>
-                    <th className="s-lost table-col-10">Lost</th>
-                    <th className="s-points table-col-10">Points</th>
-                  </tr>
-                </thead>
-
-                <tbody>
-                  <tr>
+    <div className="s-container">
+      <h4 className="title">
+        Standings <span className="title-sub">2019 - 2020 season</span>
+      </h4>
+      <hr />
+      {standings?.data
+        ? standings?.data?.standings?.map((s, index) => (
+            <table key={index} className="table-standings">
+              <thead>
+                <tr className="s-labels">
+                  <th className="s-icon table-col-10"></th>
+                  <th className="s-group">{s.group.replace(/_/g, " ")}</th>
+                  <th className="s-played table-col-10">Played</th>
+                  <th className="s-won table-col-10">Won</th>
+                  <th className="s-lost table-col-10">Lost</th>
+                  <th className="s-points table-col-10">Points</th>
+                </tr>
+              </thead>
+              <tbody>
+                {s.table.map((team, teamIndex) => (
+                  <tr key={teamIndex}>
                     <td className="s-icon table-col-10">
-                      <img src={s.table[0].team.crestUrl} />
+                      <img
+                        style={{ height: "180px", width: "300px" }}
+                        src={team.team.crestUrl}
+                        alt={`${team.team.name} crest`}
+                      />
                     </td>
                     <td className="s-teamname">
-                      <Link to={`/teams/${s.table[0].team.id}`}>
-                        {s.table[0].team.name}
+                      <Link to={`/teams/${team.team.id}`}>
+                        {team.team.name}
                       </Link>
                     </td>
                     <td className="s-played table-col-10">
-                      {s.table[0].playedGames}
+                      {team.playedGames}
                     </td>
-                    <td className="s-won table-col-10">{s.table[0].won}</td>
-                    <td className="s-lost table-col-10">{s.table[0].lost}</td>
-                    <td className="s-points table-col-10">
-                      {s.table[0].points}
-                    </td>
+                    <td className="s-won table-col-10">{team.won}</td>
+                    <td className="s-lost table-col-10">{team.lost}</td>
+                    <td className="s-points table-col-10">{team.points}</td>
                   </tr>
-                  <tr>
-                    <td className="s-icon table-col-10">
-                      <img src={s.table[1].team.crestUrl} />
-                    </td>
-                    <td className="s-teamname">
-                      <Link to={`/teams/${s.table[1].team.id}`}>
-                        {s.table[1].team.name}
-                      </Link>
-                    </td>
-                    <td className="s-played table-col-10">
-                      {s.table[1].playedGames}
-                    </td>
-                    <td className="s-won table-col-10">{s.table[1].won}</td>
-                    <td className="s-lost table-col-10">{s.table[1].lost}</td>
-                    <td className="s-points table-col-10">
-                      {s.table[1].points}
-                    </td>
-                  </tr>
-                  <tr>
-                    <td className="s-icon table-col-10">
-                      <img src={s.table[2].team.crestUrl} />
-                    </td>
-                    <td className="s-teamname">
-                      <Link to={`/teams/${s.table[2].team.id}`}>
-                        {s.table[2].team.name}
-                      </Link>
-                    </td>
-                    <td className="s-played table-col-10">
-                      {s.table[2].playedGames}
-                    </td>
-                    <td className="s-won table-col-10">{s.table[2].won}</td>
-                    <td className="s-lost table-col-10">{s.table[2].lost}</td>
-                    <td className="s-points table-col-10">
-                      {s.table[2].points}
-                    </td>
-                  </tr>
-                  <tr>
-                    <td className="s-icon table-col-10">
-                      <img src={s.table[3].team.crestUrl} />
-                    </td>
-                    <td className="s-teamname">
-                      <Link to={`/teams/${s.table[3].team.id}`}>
-                        {s.table[3].team.name}
-                      </Link>
-                    </td>
-                    <td className="s-played table-column-10">
-                      {s.table[3].playedGames}
-                    </td>
-                    <td className="s-won table-col-10">{s.table[3].won}</td>
-                    <td className="s-lost table-col-10">{s.table[3].lost}</td>
-                    <td className="s-points table-column-10">
-                      {s.table[3].points}
-                    </td>
-                  </tr>
-                </tbody>
-              </table>
-            ))
-          : "loading..."}
-      </div>
-    </>
+                ))}
+              </tbody>
+            </table>
+          ))
+        : "loading..."}
+    </div>
   );
 };
 
