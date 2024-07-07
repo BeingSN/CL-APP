@@ -10,7 +10,7 @@ const Prediction = () => {
   return (
     <div>
       <h4>Guess the score:</h4>
-      {predictions.map((p) => (
+      {predictions?.map((p) => (
         <div key={p.id}>
           <span>{p.score1}</span> : <span>{p.score2}</span>
         </div>
