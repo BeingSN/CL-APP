@@ -5,31 +5,19 @@ const Statistics = () => {
     <>
       <div className="stats-container">
         <div className="container columns-wrapper">
-          <h2>Champions League in Numbers</h2>
+          <h2>Pakistan Super League</h2>
           <div className="col-25 stats-item">
             <div className="stats-item-wrap">
               <div className="stats-label">Top scorer</div>
-              <div className="stats-value font-sm">Robert Lewandowski</div>
+              <div className="stats-value font-sm">Chris Gayle</div>
 
-              <div>15 goals</div>
+              <div>1090 Runs</div>
             </div>
           </div>
           <div className="col-25 stats-item">
             <div className="stats-item-wrap">
-              <div className="stats-label">Goals per match</div>
-              <div className="stats-value">3.24</div>
-            </div>
-          </div>
-          <div className="col-25 stats-item">
-            <div className="stats-item-wrap">
-              <div className="stats-label">Total goals</div>
-              <div className="stats-value">386</div>
-            </div>
-          </div>
-          <div className="col-25 stats-item">
-            <div className="stats-item-wrap">
-              <div className="stats-label">Matches played</div>
-              <div className="stats-value">119</div>
+              <div className="stats-label">Strike Rate</div>
+              <div className="stats-value">161.3</div>
             </div>
           </div>
         </div>

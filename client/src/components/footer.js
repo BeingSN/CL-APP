@@ -5,15 +5,8 @@ const Footer = () => {
     <footer className="footer">
       <div className="container">
         <div className="row">
-          <h4>UEFA Champions League</h4>
-          <p>a web app project</p>
-          <small>
-            Content & data from <a href="uefa.com">uefa,</a>{" "}
-            <a href="https://www.football-data.org/">
-              football-data.org, and mock data
-            </a>
-          </small>
-          .
+          <h4>Cricket Predictor</h4>
+          <p>MERN Project</p>
         </div>
       </div>
     </footer>

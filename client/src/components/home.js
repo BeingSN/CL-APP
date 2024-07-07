@@ -1,9 +1,8 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { useFetch } from "../hooks/useFetch";
 import Standings from "./standings";
 import Image from "../assets/images/winner.jpg";
-
 import bgVid from "../assets/videos/bg1.mp4";
 import Prediction from "./prediction";
 import { AddPrediction } from "./addPrediction";
@@ -21,6 +20,8 @@ const recentMatch = {
 
 const Home = () => {
   const [query, setQuery] = useState("");
+  const [winnerInfo, setWinnerInfo] = useState(null);
+  const [render, setRender] = useState(false);
 
   const url =
     query &&
@@ -29,12 +30,29 @@ const Home = () => {
   const { status, data, error } = useFetch(url);
 
   const handleClick = () => {
-    //    let query = "2001";
     setQuery("2001");
     console.log(status, data);
   };
 
-  const articles = data.standings;
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setWinnerInfo({
+        lqScore: 161,
+        kkScore: 140,
+        message: "Lahore Qalandar Won the Match",
+      });
+    }, 11000);
+
+    return () => clearTimeout(timer); // Cleanup the timer on component unmount
+  }, []);
+
+  const articles = data?.standings;
+
+  const todayDate = new Date().toLocaleString();
+  console.log(todayDate);
+
+  const [score1, setScore1] = useState(0);
+  const [score2, setScore2] = useState(0);
 
   return (
     <div className="main">
@@ -43,38 +61,42 @@ const Home = () => {
           <section className="rel">
             <div className="bg-vid">
               <div className="sticky">
-                <video autoPlay muted loop src={bgVid}></video>
+                <video
+                  autoPlay
+                  muted
+                  loop
+                  src={
+                    "https://videos.pexels.com/video-files/11755921/11755921-uhd_2732_1440_60fps.mp4"
+                  }
+                ></video>
               </div>
             </div>
             <div className="match-info">
               <div className="sticky flex-col col-30">
                 <div className="p-1">
-                  <div className="recent-match">
-                    <h4 className="title">Final Match</h4>
-                    <hr></hr>
-                    <p>{recentMatch.date}</p>
-                    <div className="match">
-                      <span>{recentMatch.team1}</span>
-                      <span>{recentMatch.score1}</span>
-                      <span>-</span>
-                      <span>{recentMatch.score2}</span>
-                      <span>{recentMatch.team2}</span>
-                    </div>
-                  </div>
+                  <h3>Date: {todayDate}</h3>
                   <div className="prediction-container">
                     <Prediction />
-                    <AddPrediction />
+                    <AddPrediction
+                      score1={score1}
+                      setScore1={setScore1}
+                      score2={score2}
+                      setScore2={setScore2}
+                      render={render}
+                      setRender={setRender}
+                    />
                   </div>
                   <div className="winner">
-                    <h4>Winners: Bayern Munich</h4>
-                    <img src={Image}></img>
-                    <a href="https://www.uefa.com/uefachampionsleague/match/2030150--paris-vs-bayern/postmatch/report/">
-                      <small>credit: uefa </small>
-                    </a>
+                    {winnerInfo && score1 && score2 && render && (
+                      <>
+                        <h4>Lahore Qalandar Score: {winnerInfo.lqScore}</h4>
+                        <h4>Karachi Kings Score: {winnerInfo.kkScore}</h4>
+                        <h2>{winnerInfo.message}</h2>
+                      </>
+                    )}
                   </div>
                 </div>
               </div>
-
               <div className="standings-wrapper col-70">
                 <Standings />
               </div>
@@ -82,7 +104,6 @@ const Home = () => {
           </section>
           <Latest />
           <Statistics />
-          <Featured />
         </div>
       </div>
     </div>

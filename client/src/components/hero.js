@@ -21,12 +21,12 @@ const Hero = () => {
     <div className="hero-container">
       <div className="logo-container">
         <Link to="/">
-          <img src={logo} />
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSe-fi3DZyfICFOt6i5SiqN1cNJWSacC3fCkg&s" />
         </Link>
       </div>
       <div className="row banner">
         <h2 ref={(el) => (title = el)} className="title">
-          UEFA Champions League
+          Pakistan Super League
         </h2>
       </div>
     </div>
